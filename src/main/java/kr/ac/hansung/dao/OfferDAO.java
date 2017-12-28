@@ -74,7 +74,7 @@ public class OfferDAO {
 		
 		String sqlstatement = "insert into datas (year, semester, code, name, seperation, credit) values (?, ?, ?, ?, ?, ?)";
 		
-		return (jdbcTemplate.update(sqlstatement, new Object [] {year, semester, code, name, seperation, credit}) == 1);
+		return (jdbcTemplate.update(sqlstatement, year, semester, code, name, seperation, credit) == 1);
 	}
 }
 
